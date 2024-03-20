@@ -1143,22 +1143,7 @@ img {
 }
 
 @media screen and (min-width: 1450px) {
-  .nav{
-    max-width: 1400px;
-  }
-  .container{
-    max-width: 1400px;
-  }
-  .swiper-button-prev{
-    left: -3rem;
-  }
-  .swiper-button-next{
-    right: -6rem;
-  }
-  .home__blob{
-    
-    width: 400px;
-  }
+  
   .home__content{
     grid-template-columns: 0.2fr 1fr 1fr;
   }

@@ -31,14 +31,14 @@ var skillsData = [
             { name: "HTML", percentage: "90%"},
             { name: "CSS", percentage: "60%"},
             { name: "JavaScript", percentage: "70%"},
-            { name: "React", percentage: "50%"},
-            { name: "Angular", percentage: "70%"},
+            { name: "React", percentage: "70%"},
+            { name: "Angular", percentage: "50%"},
         ]
     },
     {
         title: "Backend Development",
         iconName: "bi-diagram-3",
-        open:"skills__close",
+        open:"skills__open",
         skillItems: [
             { name: "Java", percentage: "90%" },
             { name: "Python", percentage: "50%"},
@@ -48,7 +48,7 @@ var skillsData = [
     {
         title: "Databases",
         iconName: "bi-database",
-        open:"skills__close",
+        open:"skills__open",
         skillItems: [
             { name: "MySQL", percentage: "70%"},
             { name: "MongoDB", percentage: "50%" },
@@ -134,8 +134,8 @@ const skillsContent = document.getElementsByClassName("skills__content"),
 function toggleSkills(){
     let itemClass = this.parentNode.className;
 
-    for(i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
+    if(itemClass === 'skills__content skills__open'){
+        this.parentNode.className = 'skills__content skills__close'
     }
     if(itemClass === 'skills__content skills__close'){
         this.parentNode.className = 'skills__content skills__open'
